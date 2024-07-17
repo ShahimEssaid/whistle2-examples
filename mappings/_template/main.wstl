@@ -1,0 +1,13 @@
+input_is: $root
+
+// Description: A minimal example of a Whistle2 function that takes one argument
+//
+// Argument(s):
+//   someValue : Some value passed (by reference) by the caller
+//
+// Output(s):
+//   An object with "value" as a key and the passed in value as the value. Think JSON object here.
+//
+def ExampleFunction(someValue) {
+  value: someValue
+}

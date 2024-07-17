@@ -1,0 +1,12 @@
+package fhir_omop
+
+import "./fhir_to_omop/_imports.wstl"
+import "./fhir_r4_to_omop/_imports.wstl"
+import "./uscore_311_to_omop53/_imports.wstl"
+
+import "class:com.essaid.whistle.plugin.seutil.SeUtilPlugin"
+
+
+if seutil::fnExists("fhir_omop", "USC311_{$root.resourceType}_OMOP53", $root) then {
+  callPackageFn("fhir_omop", "USC311_{$root.resourceType}_OMOP53", $root)
+}

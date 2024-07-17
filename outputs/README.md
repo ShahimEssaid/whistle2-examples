@@ -1,0 +1,1 @@
+This directory contains the outputs of the examples. The outputs are, for now, being committed in the repository in case it is useful to see how the might have changes over time (with the mappings are changes for example), and to give a way to create diffs to check for changes of mappings and their outputs.

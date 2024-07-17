@@ -1,0 +1,5 @@
+package fhir_omop
+
+def FHIRR4_Patient_OMOP(patient) {
+  FHIR_Patient_OMOP(patient)
+}

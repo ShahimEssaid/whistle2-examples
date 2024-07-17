@@ -1,0 +1,5 @@
+package fhir_omop
+
+import "./Encounter.wstl"
+import "./MedicationRequest.wstl"
+import "./Patient.wstl"

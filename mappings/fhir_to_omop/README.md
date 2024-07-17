@@ -1,0 +1,1 @@
+Whistle2 mappings in this directory are for mappings that apply in general when converting from FHIR to OMOP.  They are a good starting point for further customization by more specific mapping use cases.  The general idea is to configure these general mappings here and leave the more specific mappings to be added in other more specific Whistle2 mapping functions.

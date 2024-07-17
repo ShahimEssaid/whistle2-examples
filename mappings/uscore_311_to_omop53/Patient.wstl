@@ -1,0 +1,5 @@
+package fhir_omop
+
+def USC311_Patient_OMOP53(patient) {
+  FHIRR4_Patient_OMOP(patient)
+}

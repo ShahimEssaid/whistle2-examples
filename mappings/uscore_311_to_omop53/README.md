@@ -1,0 +1,1 @@
+The Whistle2 mappings here are for converting US Core 3.1.1 to OMOP 5.3. These mappings should reuse (i.e. call) the general `fhir_to_omop` and `fhir_r4_to_omop` mappings and then address any US Core 3.1.1 and OMOP 5.3 needs.

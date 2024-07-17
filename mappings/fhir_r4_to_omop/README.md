@@ -1,0 +1,1 @@
+The Whistle2 mappings here are R4 specific. They should reuse (i.e. call) the general `fhir_to_omop` mappings and then address any R4 specific needs.

@@ -1,0 +1,24 @@
+The FHIR resources under this directory are copies of the examples from [US Core 3.1.1](https://hl7.org/fhir/us/core/STU3.1.1/)
+
+- Done
+  - Patient
+  - Encounter
+  - MedicationRequest
+- To do
+  - Conditions
+  - Procedures
+  - MedicationAdministration
+  - Medications
+  - LabResults
+  - Vital Signs
+  - Allergies
+  - ServiceRequest
+  - Immunizations
+  - Lab Reporting
+  - Diagnostic Report Notes
+  - Clinical Notes
+  - Care Team
+  - CarePlan
+  - Goals
+  - Smoking Status
+  - Implantable Devices

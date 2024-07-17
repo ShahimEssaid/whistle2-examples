@@ -1,0 +1,10 @@
+package fhir_omop
+
+//
+//
+//
+def FHIR_Patient_OMOP(patient) {
+  _omop_table_name: "person"
+  person_id: patient.id
+}
+
