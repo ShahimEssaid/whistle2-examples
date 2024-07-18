@@ -1,5 +1,5 @@
 {
   "_omop_table_name": "person",
-  "gender_concept_id": "8532",
+  "gender_concept_id": "0",
   "person_id": "example"
 }

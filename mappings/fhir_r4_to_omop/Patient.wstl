@@ -1,5 +1,8 @@
 package fhir_omop
 
+import "class://com.google.cloud.verticals.foundations.dataharmonization.plugins.logging.LoggingPlugin"
+
+
 def FHIRR4_Patient_OMOP(patient) {
   // Apply the base FHIR to OMOP mappings
   FHIR_Patient_OMOP(patient)
@@ -12,8 +15,22 @@ def FHIRR4_Patient_OMOP(patient) {
 // A helper function to return a simple code value for the OMOP gender
 def _LookupGenderCode(patient){
   if patient.gender then {
-      var codings: harmonization::harmonizeWithTarget("$Local", patient.gender, "http://hl7.org/fhir/ValueSet/administrative-gender", "omop53", "fhir_patient.gender_omop_person.gender_concept_id")
-      if codings[0] then {
+
+      // These vars are spelled out for readability and are not really necessary
+      var sourceCode: patient.gender
+      var sourceSystem: "http://hl7.org/fhir/ValueSet/administrative-gender"
+      var targetSystem: "omop53"
+      var conceptMapId: "fhir_patient.gender_omop_person.gender_concept_id"
+
+      // This returns all possible target mappings as an array of Coding instances.
+      // But, if the code does not have a mapping, one Coding is returned with the same source code as "code", and the concept map id suffixes with "-unharmonized" as "system"
+      var codings: harmonization::harmonizeWithTarget("$Local", sourceCode, sourceSystem, targetSystem, conceptMapId)
+
+      // we need to check if the sourceCode was really mapped, or return 0
+      if codings[0].system == "{conceptMapId}-unharmonized" then {
+        logging::logWarning(): "Unmapped Patient.gender for patient id: {patient.id}, with gender: {patient.gender}."
+        "0"
+      } else {
         codings[0].code
       }
   }
