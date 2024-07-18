@@ -1,0 +1,54 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "fhir_patient.gender_omop_person.gender_concept_id",
+  "version": "0",
+  "status": "draft",
+  "group": [
+    {
+      "source": "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "target": "omop53",
+      "element": [
+        {
+          "code": "male",
+          "display": "Male",
+          "target": [
+            {
+              "code": "8507",
+              "display": "MALE"
+            }
+          ]
+        },
+        {
+          "code": "female",
+          "display": "Female",
+          "target": [
+            {
+              "code": "8532",
+              "display": "FEMALE"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "0",
+              "display": "0"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "0",
+              "display": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

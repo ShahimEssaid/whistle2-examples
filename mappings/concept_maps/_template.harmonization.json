@@ -1,0 +1,24 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "whistle-id",
+  "version": "0",
+  "status": "draft",
+  "group": [
+    {
+      "source": "source CodeSystem url",
+      "target": "target CodeSystem url",
+      "element": [
+        {
+          "code": "source code",
+          "display": "source label",
+          "target": [
+            {
+              "code": "first target code. At least one is required",
+              "display": "first target label"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

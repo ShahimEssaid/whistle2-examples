@@ -1,0 +1,24 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "",
+  "version": "0",
+  "status": "draft",
+  "group": [
+    {
+      "source": "",
+      "target": "",
+      "element": [
+        {
+          "code": "",
+          "display": "",
+          "target": [
+            {
+              "code": "",
+              "display": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

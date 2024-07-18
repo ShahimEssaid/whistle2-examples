@@ -1,11 +1,17 @@
 package fhir_omop
 
+import "class:com.essaid.whistle.plugin.seutil.SeUtilPlugin"
+import "class:com.google.cloud.verticals.foundations.dataharmonization.plugins.harmonization.HarmonizationPlugin"
+
+// loading all mapping functions
 import "./fhir_to_omop/_imports.wstl"
 import "./fhir_r4_to_omop/_imports.wstl"
 import "./uscore_311_to_omop53/_imports.wstl"
 
-import "class:com.essaid.whistle.plugin.seutil.SeUtilPlugin"
+// loading all concept mapps
+import "./concept_maps/_imports_FHIRr4_OMOP53.wstl"
 
+// call the function for the current FHIR resource type, if it exists.
 seutil::optCallFn("fhir_omop", "USC311_{$root.resourceType}_OMOP53", $root)
 
 //if seutil::fnExists("fhir_omop", "USC311_{$root.resourceType}_OMOP53", $root) then {
