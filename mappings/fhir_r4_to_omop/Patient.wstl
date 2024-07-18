@@ -26,7 +26,9 @@ def _LookupGenderCode(patient){
       // But, if the code does not have a mapping, one Coding is returned with the same source code as "code", and the concept map id suffixes with "-unharmonized" as "system"
       var codings: harmonization::harmonizeWithTarget("$Local", sourceCode, sourceSystem, targetSystem, conceptMapId)
 
-      // we need to check if the sourceCode was really mapped, or return 0
+      // We need to check if the sourceCode was really mapped, or return 0
+      // But, this check is not needed now that the "unmapped" information is added to the concept map file. This information
+      // basically does the same. It says use "0" if there is no target mapping, and the target system will be set to the group's system as well.
       if codings[0].system == "{conceptMapId}-unharmonized" then {
         logging::logWarning(): "Unmapped Patient.gender for patient id: {patient.id}, with gender: {patient.gender}."
         "0"

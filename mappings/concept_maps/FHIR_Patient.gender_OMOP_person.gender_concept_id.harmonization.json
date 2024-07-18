@@ -48,7 +48,12 @@
             }
           ]
         }
-      ]
+      ],
+      "unmapped": {
+        "mode": "fixed",
+        "code": "0",
+        "display": "0"
+      }
     }
   ]
 }
